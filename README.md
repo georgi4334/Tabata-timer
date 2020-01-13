@@ -1,7 +1,7 @@
 # Tabata-timer
 Tabata workout timer
 
-The application includes four inputs - Time to prepare , time to Workout , time to Rest and how many cycles you want that .
+The application includes four inputs - Time to prepare , time to Workout , time to Rest and how many cycles you want that.
 
 All inputs except the cycles are in seconds. 
 
