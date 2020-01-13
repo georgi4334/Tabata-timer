@@ -1,0 +1,123 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("../fonts/Digital\ Dismay.otf");
+}
+#title {
+  h1 {
+    font-family: "Lobster", cursive;
+    text-align: center;
+    padding: 20px;
+  }
+}
+//timer/watch design
+.outerBorderDiv {
+  width: 50%;
+  margin: auto;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background-image: linear-gradient(to left bottom, #ffffff, #fafafc, #f3f5f9, #ecf1f6, #e4edf3);
+  box-shadow: 2px 3px 15px -2px rgba(92, 91, 91, 0.75);
+}
+#timerContainer {
+  background-image: linear-gradient(to right, #cbd3c4, #c3cdbc, #bbc8b4, #b3c2ac, #abbda5);
+  border-radius: 20px;
+  border: 1.5px solid black;
+  box-shadow: 2px 3px 5px -2px rgba(92, 91, 91, 0.459);
+  .timer {
+    font-family: "digital-clock-font";
+    height: 20vh;
+    font-size: 5.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .separateLine {
+    margin: 0;
+  }
+  .leftContainerTotalTime,
+  .rightContainerCycles,
+  .middleContainerTotalTime {
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "digital-clock-font";
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+  }
+
+  small {
+    font-family: serif;
+    font-size: 13px;
+    flex: 1;
+  }
+  .timeLeft {
+    flex: 1;
+  }
+}
+
+//inputs
+#inputsForTimer {
+  margin-top: 20px;
+  .inputsForTimerCol {
+    display: flex;
+    flex-direction: column;
+    input {
+      font-family: "digital-clock-font";
+      border: none;
+      box-shadow: -1px 5px 30px -5px rgba(212, 211, 211, 0.664);
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1.3rem;
+      width: 50%;
+      margin: 5px auto;
+      text-align: center;
+      &:hover {
+        background: #ebe8e8;
+        transition: 0.2s all ease-in;
+      }
+    }
+    label {
+      text-align: center;
+    }
+  }
+  .start {
+    font-family: sans-serif;
+    width: 50%;
+    border: none;
+    margin: 20px auto 0 auto;
+    box-shadow: -1px 4px 10px 0px rgba(49, 49, 49, 0.212);
+    font-weight: bold;
+    &:hover {
+      box-shadow: -1px 4px 10px 0px rgba(49, 49, 49, 0.644);
+      transition: all 0.4s;
+    }
+  }
+}
+
+//mobile responsive design
+@media only screen and (max-width: 700px) {
+  .outerBorderDiv {
+    width: 90%;
+  }
+  #inputsForTimer {
+    .inputsForTimerCol {
+      input {
+        width: 85%;
+      }
+    }
+    .start {
+      width: 85%;
+    }
+  }
+}

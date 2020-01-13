@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabata</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row" id="title">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <h1>Tabata timer</h1>
+
+            </div>
+        </div>
+        <div class="outerBorderDiv">
+            <div class="row" id="timerContainer">
+
+                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <div>
+                                <p class="timer"></p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="separateLine">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 leftContainerTotalTime">
+                            <small>Total time</small>
+                            <div class="timeLeft"> </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 middleContainerTotalTime">
+                            <small>Current session</small>
+                            <div class="currentSession"></div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 rightContainerCycles">
+                            <small>Cycles</small>
+                            <div class="current"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row" id="inputsForTimer">
+            <div class="col-lg-12 col-md-12 col-sm-12 inputsForTimerCol">
+                <label for="prepare">Prepare</label>
+                <input type="tel" placeholder="enter seconds.." name="prepare"  pattern="^[0-9]*$" class="prepare combined">
+
+                <label for="work">Work</label>
+                <input type="tel" placeholder="enter seconds.." name="work"  pattern="^[0-9]*$" class="work combined">
+
+                <label for="rest">Rest</label>
+                <input type="tel" placeholder="enter seconds.." name="rest"  pattern="^[0-9]*$" class="rest combined">
+
+                <label for="cycles">Cycles</label>
+                <input type="tel" placeholder="enter cycles.." name="cycles"  pattern="^[0-9]*$" class="cycles">
+
+                <button class="btn btn-light start">START</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
