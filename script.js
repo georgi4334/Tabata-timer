@@ -137,6 +137,11 @@ function timer(arrPeriods, index) {
                 setTimeout(() => {
                     timerDiv.innerHTML = '0:00';
                     currentSession.innerHTML = 'Done ! ';
+                    let done = confirm("do you want another session ? ");
+                    if (done === true) {
+                        window.location.reload();
+                        document.querySelectorAll('input').reset(); 
+                    }
                 }, 1000)
             }
         }
