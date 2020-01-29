@@ -16,7 +16,7 @@ let isWorking = false;
 
 
 //enter time for workout
-const secondsToHms = (d) => {
+const secondsToHms = (d, comp) => {
 
     d = Number(d);
     let h = Math.floor(d / 3600);
@@ -26,46 +26,19 @@ const secondsToHms = (d) => {
     let hDisplay = h > 0 ? h + (":") : "";
     let mDisplay = m > 0 ? (m < 1 ? ":0" : "") + m : "0";
     let sDisplay = s > 0 ? (s < 10 ? ":0" : ":") + s : "";
-    prepare.value = `${hDisplay}${mDisplay}${sDisplay}`;
+    comp.value = `${hDisplay}${mDisplay}${sDisplay}`;
 
 }
 
-const secondsToHms2 = (d) => {
-
-    d = Number(d);
-    let h = Math.floor(d / 3600);
-    let m = Math.floor(d % 3600 / 60);
-    let s = Math.floor(d % 3600 % 60);
-
-    let hDisplay = h > 0 ? h + (":") : "";
-    let mDisplay = m > 0 ? (m < 1 ? ":0" : "") + m : "0";
-    let sDisplay = s > 0 ? (s < 10 ? ":0" : ":") + s : "";
-    work.value = `${hDisplay}${mDisplay}${sDisplay}`;
-
-
-}
-const secondsToHms3 = (d) => {
-
-    d = Number(d);
-    let h = Math.floor(d / 3600);
-    let m = Math.floor(d % 3600 / 60);
-    let s = Math.floor(d % 3600 % 60);
-
-    let hDisplay = h > 0 ? h + (":") : "";
-    let mDisplay = m > 0 ? (m < 1 ? ":0" : "") + m : "0";
-    let sDisplay = s > 0 ? (s < 10 ? ":0" : ":") + s : "";
-    rest.value = `${hDisplay}${mDisplay}${sDisplay}`;
-
-}
 
 combined.forEach(i => i.addEventListener('change', (e) => {
     let attr = i.getAttribute('name');
     if (attr == 'prepare') {
-        secondsToHms(i.value);
+        secondsToHms(i.value, prepare);
     } else if (attr == 'work') {
-        secondsToHms2(i.value)
+        secondsToHms(i.value, work)
     } else if (attr == 'rest') {
-        secondsToHms3(i.value)
+        secondsToHms(i.value, rest)
     }
 
 }))
@@ -160,7 +133,7 @@ function timer(arrPeriods, index) {
                 index++;
                 timer(arrPeriods, index);
             } else {
-                
+
                 setTimeout(() => {
                     timerDiv.innerHTML = '0:00';
                     currentSession.innerHTML = 'Done ! ';
