@@ -60,22 +60,24 @@
         </div>
 
         <div class="row" id="inputsForTimer">
-            <div class="col-lg-12 col-md-12 col-sm-12 inputsForTimerCol">
+
+            <form class="col-lg-12 col-md-12 col-sm-12 inputsForTimerCol">
                 <label for="prepare">Prepare</label>
-                <input type="tel" placeholder="enter seconds.." name="prepare"  pattern="^[0-9]*$" class="prepare combined">
+                <input type="tel" placeholder="enter seconds.." name="prepare" class="prepare combined">
 
                 <label for="work">Work</label>
-                <input type="tel" placeholder="enter seconds.." name="work"  pattern="^[0-9]*$" class="work combined">
+                <input type="tel" placeholder="enter seconds.." name="work" class="work combined">
 
                 <label for="rest">Rest</label>
-                <input type="tel" placeholder="enter seconds.." name="rest"  pattern="^[0-9]*$" class="rest combined">
+                <input type="tel" placeholder="enter seconds.." name="rest" pattern="^[0-9]$"
+                    oninvalid="this.setCustomValidity(' ')" onchange="try{setCustomValidity('')}catch(e){}"
+                    class="rest combined">
 
                 <label for="cycles">Cycles</label>
-                <input type="tel" placeholder="enter cycles.." name="cycles"  pattern="^[0-9]*$" class="cycles">
+                <input type="tel" placeholder="enter cycles.." name="cycles" class="cycles">
 
                 <button class="btn btn-light start">START</button>
-
-            </div>
+            </form>
         </div>
     </div>
 

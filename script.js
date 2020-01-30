@@ -79,7 +79,6 @@ allDivs.forEach(e => e.addEventListener('change', () => {
 
 }))
 
-console.log(totalCycles)
 
 //start of tabata onclick 
 startBtn.onclick = function () {
@@ -140,7 +139,7 @@ function timer(arrPeriods, index) {
                     let done = confirm("do you want another session ? ");
                     if (done === true) {
                         window.location.reload();
-                        document.querySelectorAll('input').reset(); 
+                        document.querySelector('.inputsForTimerCol').reset();
                     }
                 }, 1000)
             }
