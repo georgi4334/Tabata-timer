@@ -24,8 +24,8 @@ body {
   border-radius: 30px;
   background-image: -webkit-gradient(linear, right top, left bottom, from(#ffffff), color-stop(#fafafc), color-stop(#f3f5f9), color-stop(#ecf1f6), to(#e4edf3));
   background-image: linear-gradient(to left bottom, #ffffff, #fafafc, #f3f5f9, #ecf1f6, #e4edf3);
-  -webkit-box-shadow: 2px 3px 15px -2px rgba(92, 91, 91, 0.75);
-          box-shadow: 2px 3px 15px -2px rgba(92, 91, 91, 0.75);
+  -webkit-box-shadow: -2px -2px 5px #f3f2f2, 2px 2px 5px #bcbfca;
+          box-shadow: -2px -2px 5px #f3f2f2, 2px 2px 5px #bcbfca;
 }
 
 #timerContainer {
@@ -105,22 +105,28 @@ body {
 }
 
 #inputsForTimer .inputsForTimerCol input {
+  background-color: #f3f2f2;
   font-family: "digital-clock-font";
   border: none;
-  -webkit-box-shadow: -1px 5px 30px -5px rgba(212, 211, 211, 0.664);
-          box-shadow: -1px 5px 30px -5px rgba(212, 211, 211, 0.664);
-  border-radius: 10px;
+  -webkit-box-shadow: inset 2px 2px 5px #bcbfca, inset -5px -5px 10px #f3f2f2;
+          box-shadow: inset 2px 2px 5px #bcbfca, inset -5px -5px 10px #f3f2f2;
+  border-radius: 25px;
   font-weight: 600;
   font-size: 1.3rem;
   width: 50%;
   margin: 5px auto;
+  padding: 7px 0;
   text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
 }
 
-#inputsForTimer .inputsForTimerCol input:hover {
-  background: #ebe8e8;
-  -webkit-transition: 0.2s all ease-in;
-  transition: 0.2s all ease-in;
+#inputsForTimer .inputsForTimerCol input:focus {
+  -webkit-box-shadow: inset 1px 1px 2px #bcbfca, inset -1px -1px 2px #f3f2f2;
+          box-shadow: inset 1px 1px 2px #bcbfca, inset -1px -1px 2px #f3f2f2;
 }
 
 #inputsForTimer .inputsForTimerCol label {
@@ -128,20 +134,29 @@ body {
 }
 
 #inputsForTimer .start {
+  color: #AE1100;
   font-family: sans-serif;
   width: 50%;
   border: none;
-  margin: 20px auto 0 auto;
-  -webkit-box-shadow: -1px 4px 10px 0px rgba(49, 49, 49, 0.212);
-          box-shadow: -1px 4px 10px 0px rgba(49, 49, 49, 0.212);
+  border-radius: 20px;
+  margin: 30px auto 0 auto;
+  padding: 10px 0;
+  -webkit-box-shadow: -5px -5px 20px #f3f2f2, 5px 5px 7px #bcbfca;
+          box-shadow: -5px -5px 20px #f3f2f2, 5px 5px 7px #bcbfca;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
   font-weight: bold;
 }
 
 #inputsForTimer .start:hover {
-  -webkit-box-shadow: -1px 4px 10px 0px rgba(49, 49, 49, 0.644);
-          box-shadow: -1px 4px 10px 0px rgba(49, 49, 49, 0.644);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-box-shadow: -2px -2px 5px #f3f2f2, 2px 2px 5px #bcbfca;
+          box-shadow: -2px -2px 5px #f3f2f2, 2px 2px 5px #bcbfca;
+}
+
+#inputsForTimer .start:active {
+  -webkit-box-shadow: inset 1px 1px 2px #bcbfca, inset -1px -1px 2px #f3f2f2;
+          box-shadow: inset 1px 1px 2px #bcbfca, inset -1px -1px 2px #f3f2f2;
 }
 
 @media only screen and (max-width: 700px) {
